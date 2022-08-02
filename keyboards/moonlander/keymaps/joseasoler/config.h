@@ -19,3 +19,6 @@
 #pragma once
 
 #define ORYX_CONFIGURATOR
+
+// This keymap supports Windows and Linux Unicode modes only.
+#define UNICODE_SELECTED_MODES UC_LNX, UC_WINC
