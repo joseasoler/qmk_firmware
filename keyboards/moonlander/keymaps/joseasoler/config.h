@@ -22,3 +22,5 @@
 
 // This keymap supports Windows and Linux Unicode modes only.
 #define UNICODE_SELECTED_MODES UC_LNX, UC_WINC
+#define UNICODE_SONG_LNX  SONG(UNICODE_LINUX)
+#define UNICODE_SONG_WINC SONG(UNICODE_WINDOWS)
