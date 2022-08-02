@@ -64,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   ES_Q,     ES_W,     ES_E,     ES_R,     ES_T,     MO_SYMBL,     MO_SYMBL, ES_Y,     ES_U,     ES_I,     ES_O,     ES_P,     CK_QUES,
         _______,  ES_A,     ES_S,     ES_D,     ES_F,     ES_G,     MO_NAVIG,     MO_NAVIG, ES_H,     ES_J,     ES_K,     ES_L,     ES_NTIL,  ES_ACUT,
         KC_LSFT,  ES_Z,     ES_X,     ES_C,     ES_V,     ES_B,                             ES_N,     ES_M,     ES_COMM,  ES_DOT,   CK_EXLM,  KC_RSFT,
-        KC_LCTL,  KC_LGUI,  KC_LALT,  KC_LEFT,  KC_RGHT,            _______,      _______,            KC_UP,    KC_DOWN,  KC_ALGR,  KC_MEH,   KC_HYPR,
-                                                KC_SPC,   KC_BSPC,  _______,      _______,  KC_DELT,  KC_ENT
+        KC_LCTL,  KC_LGUI,  KC_LALT,  KC_LEFT,  KC_RGHT,            MO_NAVIG,     MO_NAVIG,           KC_UP,    KC_DOWN,  KC_ALGR,  KC_MEH,   KC_HYPR,
+                                                KC_SPC,   KC_BSPC,  MO_SYMBL,     MO_SYMBL, KC_DELT,  KC_ENT
         // clang-format on
         ),
 
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,      _______,  _______,  KC_BRID,  KC_BRIU,  _______,  KC_PSCR,  KC_F12,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,      _______,  _______,  KC_MPRV,  KC_MNXT,  KC_MPLY,  _______,  _______,
         _______,  _______,  _______,  _______,  _______,  _______,                          _______,  KC_VOLD,  KC_VOLU,  KC_MUTE, _______,  _______,
-        _______,  _______,  _______,  _______,  _______,            _______,      _______,            _______,  _______,  _______,  _______,  _______,
+        _______,  _______,  _______,  KC_PGUP,  KC_PGDN,            _______,      _______,            KC_HOME,  KC_END,   _______,  _______,  _______,
                                                 _______,  _______,  _______,      _______,  _______,  UC_MOD
 
         // clang-format on
