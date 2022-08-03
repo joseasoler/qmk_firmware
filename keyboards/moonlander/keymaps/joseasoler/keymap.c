@@ -39,6 +39,7 @@ enum custom_keycodes {
 
     // Unicode keycodes.
     CK_SHRUG, // ¯\_(ツ)_/¯
+    CK_EURO,  // €
 
     // Keycodes with alternate shift characters.
     CK_QUOT, // " -> '
@@ -74,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,      CK_SHRUG, ES_MORD,  ES_NOT,   _______,  KU_DEGRE, _______,  _______,
         _______,  _______,  CK_ARROW, ES_LABK,  ES_RABK,  ES_HASH,  _______,      _______,  ES_CIRC,  ES_EQL,   ES_AMPR,  ES_PIPE,  ES_TILD,  _______,
         _______,  ES_SLSH,  ES_BSLS,  ES_LPRN,  ES_RPRN,  ES_UNDS,  _______,      _______,  KC_PERC,  ES_PLUS,  ES_MINS,  ES_ASTR,  ES_SLSH,  _______,
-        _______,  ES_LBRC,  ES_RBRC,  ES_LCBR,  ES_RCBR,  ES_AT,                            ES_CCED,  KC_DLR,   ES_EURO,  KU_POUND, _______,  _______,
+        _______,  ES_LBRC,  ES_RBRC,  ES_LCBR,  ES_RCBR,  ES_AT,                            ES_CCED,  KC_DLR,   CK_EURO,  KU_POUND, _______,  _______,
         _______,  _______,  _______,  _______,  _______,            _______,      _______,            _______,  _______,  _______,  _______,  _______,
                                                 _______,  _______,  _______,      _______,  _______,  _______
 
@@ -114,8 +115,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
             break;
 
         // Custom unicode keycodes.
-        case CK_SHRUG: //
+        case CK_SHRUG:
             send_unicode_string("¯\\_(ツ)_/¯");
+            break;
+        case CK_EURO:
+            send_unicode_string("€");
             break;
 
         // Keycodes with alternate shift characters.
