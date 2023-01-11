@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		// clang-format off
 		// Left hand.
 		KC_TRNS,  KC_NO,    KC_NO,    KC_NO,     KC_NO,   KC_NO,    KC_TRNS,
-		KC_TRNS,  KC_NO,    CK_ARROW, ES_LESS,   ES_GRTR, ES_HASH,  KC_TRNS,
+		KC_TRNS,  KC_NO,    CK_ARROW, ES_LABK,   ES_RABK, ES_HASH,  KC_TRNS,
 		KC_TRNS,  ES_SLSH,  ES_BSLS,  ES_LPRN,   ES_RPRN, ES_UNDS,
 		KC_TRNS,  ES_LBRC,  ES_RBRC,  ES_LCBR,   ES_RCBR, ES_AT,    KC_TRNS,
 		KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,
@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		                                                                      KC_TRNS,
 		                                                  KC_TRNS,  KC_TRNS,  KC_TRNS,
 		// Right hand.
-		          CK_SHRUG, ES_OVRR,  ES_NOT,   KC_NO,    KU_DEGRE, KC_NO,    KC_TRNS,
+		          CK_SHRUG, ES_MORD,  ES_NOT,   KC_NO,    KU_DEGRE, KC_NO,    KC_TRNS,
 		          KC_TRNS,  ES_CIRC,  ES_EQL,   ES_AMPR,  ES_PIPE,  ES_TILD,  KC_TRNS,
 		                    KC_PERC,  ES_PLUS,  ES_MINS,  ES_ASTR,  ES_SLSH,  KC_TRNS,
 		          KC_TRNS,  ES_CCED,  KC_DLR,   ES_EURO,  KU_POUND, KC_NO,    KC_TRNS,
@@ -138,12 +138,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 	// Custom macro keycodes.
 	case CK_ARROW: // ->
 		tap_code(ES_MINS);
-		tap_code16(ES_GRTR);
+		tap_code16(ES_RABK);
 		break;
 
 	// Custom unicode keycodes.
 	case CK_SHRUG: // ¯\_(ツ)_/¯
-		send_unicode_hex_string("00AF 005C 005F 0028 30C4 0029 005F 002F 00AF");
+		// send_unicode_hex_string("00AF 005C 005F 0028 30C4 0029 005F 002F 00AF");
 		break;
 
 	// Keycodes with alternate shift characters.
